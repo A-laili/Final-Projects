@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduling Simulation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+        .task-input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Scheduling Algorithm Simulator</h1>
+    <form method="POST">
+        <div class="form-group">
+            <label for="algorithm">Select Algorithm</label>
+            <select class="form-control" id="algorithm" name="algorithm" required>
+                <option value="FCFS">First-Come-First-Serve (FCFS)</option>
+                <option value="SJF Preemptive">Shortest Job First (Preemptive)</option>
+                <option value="SJF Non-Preemptive">Shortest Job First (Non-Preemptive)</option>
+                <option value="EDF">Earliest Deadline First (EDF)</option>
+                <option value="LLF">Least Laxity First (LLF)</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="numTasks">Number of Tasks</label>
+            <input type="number" class="form-control" id="numTasks" name="num_tasks" min="1" max="10" value="3" required>
+        </div>
+        
+        <div id="taskInputs"></div>
+
+        <button type="submit" class="btn btn-primary">Simulate</button>
+    </form>
+
+    {% if gantt_chart_img %}
+        <h2>Simulation Results</h2>
+        <h4>Waiting Times:</h4>
+        <pre>{{ waiting_times }}</pre>
+        {% if avg_waiting_time is not none %}
+            <h5>Average Waiting Time: {{ avg_waiting_time }}</h5>
+        {% endif %}
+        <h4>Gantt Chart:</h4>
+        <img src="data:image/png;base64,{{ gantt_chart_img }}" alt="Gantt Chart">
+    {% endif %}
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const numTasksInput = document.getElementById("numTasks");
+        const taskInputsContainer = document.getElementById("taskInputs");
+
+        function generateTaskInputs() {
+            const numTasks = parseInt(numTasksInput.value);
+            taskInputsContainer.innerHTML = '';
+
+            for (let i = 1; i <= numTasks; i++) {
+                const taskDiv = document.createElement('div');
+                taskDiv.classList.add('mb-3');
+                taskDiv.classList.add('task-input');
+
+                taskDiv.innerHTML = `
+                    <h5>Task ${i}</h5>
+                    <div class="row">
+                        <div class="col">
+                            <label for="name_${i}" class="form-label">Task Name</label>
+                            <input type="text" class="form-control" name="name_${i}" value="Task ${i}">
+                        </div>
+                        <div class="col">
+                            <label for="arrival_${i}" class="form-label">Arrival Time</label>
+                            <input type="number" class="form-control" name="arrival_${i}" value="0">
+                        </div>
+                        <div class="col">
+                            <label for="burst_${i}" class="form-label">Burst Time</label>
+                            <input type="number" class="form-control" name="burst_${i}" value="1">
+                        </div>
+                        <div class="col">
+                            <label for="deadline_${i}" class="form-label">Deadline</label>
+                            <input type="number" class="form-control" name="deadline_${i}" value="5">
+                        </div>
+                    </div>
+                `;
+                taskInputsContainer.appendChild(taskDiv);
+            }
+        }
+
+        numTasksInput.addEventListener('input', generateTaskInputs);
+        generateTaskInputs(); // Generate inputs on initial load
+    });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
