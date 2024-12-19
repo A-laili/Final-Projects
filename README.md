@@ -62,7 +62,7 @@ Assurez-vous d'avoir Proteus installé sur votre machine :
    - Exécutez `git clone https://github.com/A-laili/Final-Projects/tree/main/proteus/new` pour cloner le projet.
 
 2. **Lancement du projet**:
-   - Exécutez `start` pour démarrer le projet avec Proteus.
+   - Exécutez `start` pour simuler le projet avec Proteus.
 
 
 
