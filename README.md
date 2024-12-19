@@ -59,7 +59,7 @@ Assurez-vous d'avoir Proteus installé sur votre machine :
 ### Exécution Locale
 
 1. **Cloner le Référentiel**:
-   - Exécutez `git clone https://github.com/votre-utilisateur/movie-app.git` pour cloner le projet.
+   - Exécutez `git clone https://github.com/A-laili/Final-Projects/tree/main/proteus/new` pour cloner le projet.
 
 2. **Lancement du projet**:
    - Exécutez `start` pour démarrer le projet avec Proteus.
