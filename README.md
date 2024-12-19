@@ -19,10 +19,12 @@ https://github.com/user-attachments/assets/279c424c-68a0-4bd7-84c4-b62d18692735
 
 **Canal A (Jaune) – Tension secteur redressée (bloc "Redressement")**
 - **Observation** : La forme d’onde jaune est une sinusoïde redressée double alternance.
-- **Lien fonctionnel** : - Elle provient du pont de diodes.
-                          -Le signal correspond à la tension secteur 220 V redressée sans filtrage 
+- **Lien fonctionnel** :
+  - Elle provient du pont de diodes.
+  - Le signal correspond à la tension secteur 220 V redressée sans filtrage 
 complet.
-- Cette tension sert d’entrée à l’étage de découpage de puissance.
+  - Cette tension sert d’entrée à l’étage de découpage de puissance.
+
 
   
 
