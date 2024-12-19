@@ -1,6 +1,7 @@
 # Projet Proteus
 
 ## Diagramme fonctionnel
+
 - **Entrée 230V AC** : Il s'agit de l'entrée principale, généralement une tension alternative de 230V provenant du réseau.
 - **Protection** : Ce bloc protège le circuit contre les surtensions, les surintensités, ou d'autres anomalies électriques.
 - **Redressement** : Cette étape convertit la tension alternative (AC) en tension continue (DC).
@@ -13,3 +14,15 @@
 
 
 https://github.com/user-attachments/assets/279c424c-68a0-4bd7-84c4-b62d18692735
+
+## Résultats de l'oscilloscope
+
+**Canal A (Jaune) – Tension secteur redressée (bloc "Redressement")**
+- **Observation** : La forme d’onde jaune est une sinusoïde redressée double alternance.
+- **Lien fonctionnel** : - Elle provient du pont de diodes.
+                          -Le signal correspond à la tension secteur 220 V redressée sans filtrage 
+complet.
+- Cette tension sert d’entrée à l’étage de découpage de puissance.
+
+  
+
