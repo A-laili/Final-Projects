@@ -46,4 +46,24 @@ PWM influence la forme.
   - Ce signal ajuste dynamiquement la largeur des impulsions pour réguler la 
 tension en sortie.
 
+## Comment Exécuter le Projet
+
+Suivez ces étapes pour exécuter le projet localement :
+
+### Prérequis
+
+Assurez-vous d'avoir les éléments suivants installés sur votre machine :
+
+- [Proteus](https://www.labcenter.com/downloads/)
+
+### Exécution Locale
+
+1. **Cloner le Référentiel**:
+   - Exécutez `git clone https://github.com/votre-utilisateur/movie-app.git` pour cloner le projet.
+
+2. **Lancement du projet**:
+   - Exécutez `start` pour démarrer le projet avec Proteus.
+
+
+
 
