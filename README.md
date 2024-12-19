@@ -39,7 +39,7 @@ alimenter le découpage PWM.
 PWM influence la forme.
   - Cela montre une conversion de tension à travers le transformateur.
  
-** Canal D (Vert) – Signal de rétroaction (bloc "Régulation")**
+**Canal D (Vert) – Signal de rétroaction (bloc "Régulation")**
 - **Observation** : Le signal vert est un signal carré ou numérique.
 - **Lien fonctionnel** :
   - Il représente la rétroaction de la sortie vers le circuit de commande PWM.
