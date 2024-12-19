@@ -52,7 +52,7 @@ Suivez ces étapes pour exécuter le projet localement :
 
 ### Prérequis
 
-Assurez-vous d'avoir les éléments suivants installés sur votre machine :
+Assurez-vous d'avoir Proteus installé sur votre machine :
 
 - [Proteus](https://www.labcenter.com/downloads/)
 
