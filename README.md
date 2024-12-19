@@ -25,6 +25,25 @@ https://github.com/user-attachments/assets/279c424c-68a0-4bd7-84c4-b62d18692735
 complet.
   - Cette tension sert d’entrée à l’étage de découpage de puissance.
 
+**Canal B (Rose) – Tension après filtrage (bloc "Filtrage")**
+- **Observation** : La forme d’onde rose est une sinusoïde lissée avec peu d’ondulations.
+  - Cette tension résulte du condensateur de filtrage placé après le pont de 
+diodes.
+  - Elle représente une tension continue partiellement lissée utilisée pour 
+alimenter le découpage PWM.
 
-  
+**Canal C (Bleu) – Tension de sortie du transformateur (bloc "Transformateur")**
+- **Observation** : La forme d’onde bleue est une sinusoïde tronquée ou modulée.
+- **Lien fonctionnel** :
+  - Le signal est généré après le transformateur haute fréquence, où le découpage 
+PWM influence la forme.
+  - Cela montre une conversion de tension à travers le transformateur.
+ 
+** Canal D (Vert) – Signal de rétroaction (bloc "Régulation")**
+- **Observation** : Le signal vert est un signal carré ou numérique.
+- **Lien fonctionnel** :
+  - Il représente la rétroaction de la sortie vers le circuit de commande PWM.
+  - Ce signal ajuste dynamiquement la largeur des impulsions pour réguler la 
+tension en sortie.
+
 
